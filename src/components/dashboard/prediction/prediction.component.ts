@@ -246,10 +246,8 @@ export class PredictionComponent implements OnInit, OnDestroy, AfterViewChecked 
         return of([null, null] as [PredictionData | null, PredictionResult | null]);
     }
 
-    // The API URLs for model-values and model-result
-    // IMPORTANT: Make sure these URLs match your backend API structure
-    // The example uses localhost:5071, adjust if your backend is elsewhere (e.g., estigo.runasp.net)
-    const apiBaseUrl = 'https://localhost:5071'; // OR 'https://estigo.runasp.net' - REPLACE WITH YOUR ACTUAL API URL
+
+    const apiBaseUrl = 'https://estigo.runasp.net'; // OR 'https://estigo.runasp.net' - REPLACE WITH YOUR ACTUAL API URL
     
     const dataUrl = `${apiBaseUrl}/api/Prediction/model-values/${this.targetStudentId}/${this.categoryId}`;
     const resultUrl = `${apiBaseUrl}/api/Prediction/model-result/${this.targetStudentId}/${this.categoryId}`;
